@@ -16,3 +16,11 @@ To discard a message when a specific time interval has elapsed:
 [Recoverable]
 public class MyMessage { }
 ```
+
+The message expiration can also be configured as an overall override for Audit trail messages by using the tweaking the OverrideTimeToBeReceived over the configuration file
+
+For example, discarding message from the audit trail after 60 min :
+
+```C#
+<AuditConfig QueueName="audit" OverrideTimeToBeReceived="0:60:0"/>
+```
